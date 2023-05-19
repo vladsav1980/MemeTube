@@ -124,9 +124,7 @@ button[type="button"]*/ {
 
 @media (max-width: 1000px) {
 
-  * {
-    zoom: 1.2; /* Збільшення масштабу в 1.5 раза */
-  }
+  
 
 
   input[type="text"],
@@ -138,11 +136,6 @@ button[type="button"]*/ {
 
   }
 
-  .video h3 {
-  margin-top: 0;
-  font-size: 12px;
-  font-weight: bold;
-}
 
 
   
