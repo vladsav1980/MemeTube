@@ -117,3 +117,42 @@ button[type="button"]*/ {
 .saved-query-button .remove-button:hover {
   background-color: darkred;
 }
+
+
+
+/* Адаптація під мобільний перегляд */
+
+@media (max-width: 1000px) {
+
+  * {
+    zoom: 1.2; /* Збільшення масштабу в 1.5 раза */
+  }
+
+
+  input[type="text"],
+  button[type="submit"],
+  button[type="button"],
+  .saved-query-button {
+    font-size: 14px;
+    padding: 6px 10px;
+
+  }
+
+  .video h3 {
+  margin-top: 0;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+
+  
+  input[type="text"] {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  
+  .video {
+    width: 100%;
+  }
+}
