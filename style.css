@@ -13,7 +13,8 @@ label {
   font-weight: bold;
 }
 
-input[type="text"], button[type="submit"] {
+input[type="text"],
+button[type="submit"] {
   font-size: 16px;
   padding: 8px 12px;
   border-radius: 4px;
