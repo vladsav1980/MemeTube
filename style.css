@@ -61,4 +61,59 @@ button[type="button"]*/ {
 
 .saved-query-button {
   margin-right: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: none;
+}
+
+/*.saved-query-button {
+  display: inline-block;
+  font-size: 16px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.saved-query-button::after {
+  content: '×';
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 16px;
+  height: 16px;
+  background-color: #dc3545;
+  color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#saved-queries {
+  margin-top: 10px;
+}*/
+
+.saved-query-button {
+  position: relative;
+}
+
+.saved-query-button .remove-button {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 16px;
+  height: 16px;
+  background-color: red;
+  border-radius: 50%;
+  border: none;
+  color: white;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.saved-query-button .remove-button:hover {
+  background-color: darkred;
 }
