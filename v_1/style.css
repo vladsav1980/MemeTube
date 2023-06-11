@@ -1,0 +1,159 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+input[type="text"],
+button[type="submit"],
+button[type="button"] {
+  font-size: 18px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: none;
+}
+
+input[type="text"] {
+  width: 60%;
+  margin-right: 10px;
+}
+
+button/*[type="submit"],
+button[type="button"]*/ {
+  /*background-color: #007bff;
+  color: #fff;*/
+  color:black;
+  background:orange;
+}
+
+#search-results {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.video {
+  width: 48%;
+  margin-bottom: 20px;
+}
+
+.video h3 {
+  margin-top: 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.video iframe {
+  width: 100%;
+}
+
+#saved-queries {
+  margin-top: 20px;
+}
+
+.saved-query-button {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: none;
+}
+
+/*.saved-query-button {
+  display: inline-block;
+  font-size: 16px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.saved-query-button::after {
+  content: '×';
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 16px;
+  height: 16px;
+  background-color: #dc3545;
+  color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#saved-queries {
+  margin-top: 10px;
+}*/
+
+.saved-query-button {
+  position: relative;
+  font-size: 20px;
+  color:black;
+  background:orange;
+}
+
+
+
+.saved-query-button .remove-button {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 50%;
+  border: none;
+  color: white;
+  font-size: 12px;  
+  cursor: pointer;
+
+}
+
+.saved-query-button .remove-button:hover {
+  background-color: darkred;
+}
+
+
+
+/* Адаптація під мобільний перегляд */
+
+@media (max-width: 1000px) {
+
+  
+
+
+  input[type="text"],
+  button[type="submit"],
+  button[type="button"],
+  .saved-query-button {
+    font-size: 14px;
+    padding: 6px 10px;
+
+  }
+
+
+
+  
+  input[type="text"] {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  
+  .video {
+    width: 100%;
+  }
+}
