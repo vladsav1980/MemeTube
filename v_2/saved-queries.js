@@ -48,26 +48,6 @@ function createSavedQueryButton(query) {
   return savedQueryButton;
 }
 
-function loadSavedQueries() {
-  savedQueries = JSON.parse(localStorage.getItem('savedQueries')) || [];
 
-  for (var i = savedQueries.length - 1; i >= 0; i--) {
-    var query = savedQueries[i];
-    var savedQueryButton = createSavedQueryButton(query);
-    savedQueriesContainer.appendChild(savedQueryButton);
-  }
-}
-
-function limitSavedQueries() {
-  if (savedQueries.length > 20) {
-    var buttonsToRemove = savedQueries.length - 20;
-
-    for (var i = 0; i < buttonsToRemove; i++) {
-      var query = savedQueries[i];
-      removeSavedQuery(query);
-      savedQueriesContainer.removeChild(savedQueriesContainer.lastChild);
-    }
-  }
-}
 
 
