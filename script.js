@@ -1,5 +1,6 @@
 
 
+// var apiKey = 'AIzaSyC2VPl0djicrfyLku1xK-jax8aIcQ9hhFg';
 var apiKey = 'AIzaSyDPEmTC6Rxdg8emogFoROj6LXtELKOThw0';
 
 var searchForm = document.getElementById('search-form');
@@ -13,7 +14,7 @@ searchForm.addEventListener('submit', function(event) {
 
 document.addEventListener('DOMContentLoaded', function() {
   loadSavedQueries();
-  displayInitialSearchResults();
+  displayInitialSearchResults();  
 });
 
 
@@ -128,3 +129,4 @@ function displayInitialSearchResults() {
     searchVideos(query, 2, true);
   }
 }
+

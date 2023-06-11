@@ -1,6 +1,7 @@
 
 
-var apiKey = 'AIzaSyC2VPl0djicrfyLku1xK-jax8aIcQ9hhFg';
+// var apiKey = 'AIzaSyC2VPl0djicrfyLku1xK-jax8aIcQ9hhFg';
+var apiKey = 'AIzaSyDPEmTC6Rxdg8emogFoROj6LXtELKOThw0';
 
 var searchForm = document.getElementById('search-form');
 var savedQueriesContainer = document.getElementById('saved-queries');
@@ -13,8 +14,7 @@ searchForm.addEventListener('submit', function(event) {
 
 document.addEventListener('DOMContentLoaded', function() {
   loadSavedQueries();
-  displayInitialSearchResults();
-  addKeyboardNavigation();
+  displayInitialSearchResults();  
 });
 
 
@@ -130,25 +130,3 @@ function displayInitialSearchResults() {
   }
 }
 
-function addKeyboardNavigation() {
-  var resultsContainer = document.getElementById('search-results');
-
-  resultsContainer.addEventListener('keydown', function(event) {
-    var currentElement = event.target;
-    var videos = resultsContainer.getElementsByClassName('video');
-    var currentIndex = Array.from(videos).indexOf(currentElement);
-
-    switch (event.keyCode) {
-      case 37: // Left arrow key
-        if (currentIndex > 0) {
-          videos[currentIndex - 1].focus();
-        }
-        break;
-      case 39: // Right arrow key
-        if (currentIndex < videos.length - 1) {
-          videos[currentIndex + 1].focus();
-        }
-        break;
-    }
-  });
-}
