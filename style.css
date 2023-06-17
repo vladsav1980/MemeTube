@@ -123,11 +123,11 @@ button[type="button"]*/ {
 
 }
 
-.saved-query-button:hover, .saved-query-button .remove-button:hover {
-  opacity: 0.8;
+.saved-query-button .remove-button:hover {
+  background: darkred;
 }
 
-.saved-query-button:active, .saved-query-button .remove-button:active {
+.saved-query-button:active {
   opacity: 0.6;
 }
 
