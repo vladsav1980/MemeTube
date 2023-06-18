@@ -1,7 +1,7 @@
 
 
 // var apiKey = 'AIzaSyC2VPl0djicrfyLku1xK-jax8aIcQ9hhFg';
-var apiKey = 'AIzaSyDPEmTC6Rxdg8emogFoROj6LXtELKOThw0';
+var apiKey = ['AIzaSyDPEmTC6Rxdg8emogFoROj6LXtELKOThw0', 'AIzaSyC2VPl0djicrfyLku1xK-jax8aIcQ9hhFg'];
 
 var searchForm = document.getElementById('search-form');
 var savedQueriesContainer = document.getElementById('saved-queries');
@@ -30,7 +30,7 @@ function searchAndSaveQuery() {
 }
 
 function searchVideos(query, maxResults, initialDisplay) {
-  var requestUrl = 'https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=' + maxResults + '&q=' + query + '&key=' + apiKey;
+  var requestUrl = 'https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=' + maxResults + '&q=' + query + '&key=' + apiKey[Math.round(Math.random())];
 
   var xhr = new XMLHttpRequest();
   xhr.open('GET', requestUrl, true);
@@ -72,9 +72,10 @@ function displaySearchResults(results, initialDisplay1) {
 
     resultsContainer.appendChild(videoElement);
   }
+  
 }
 
-  
+
 }
 
 function saveQuery(query) {
@@ -129,4 +130,5 @@ function displayInitialSearchResults() {
     searchVideos(query, 2, true);
   }
 }
+
 

@@ -103,6 +103,7 @@ button[type="button"]*/ {
   font-size: 20px;
   color:black;
   background:orange;
+  cursor: pointer;
 }
 
 
@@ -123,7 +124,11 @@ button[type="button"]*/ {
 }
 
 .saved-query-button .remove-button:hover {
-  background-color: darkred;
+  background: darkred;
+}
+
+.saved-query-button:active {
+  opacity: 0.6;
 }
 
 
@@ -157,5 +162,3 @@ button[type="button"]*/ {
     width: 100%;
   }
 }
-
-

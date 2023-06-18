@@ -54,7 +54,7 @@ function displaySearchResults(results, initialDisplay1) {
 
     var videoElement = document.createElement('div');
     videoElement.classList.add('video');
-    videoElement.innerHTML = '<h3>' + video.snippet.title + '</h3>' +
+    videoElement.innerHTML = '<h3>' + video.snippet.title + ' <button class="saved-query-button" onclick="fetchRelatedVideos(`' + video.id.videoId + '`)"><small>Схожі відео</small></button>' + '</h3>' +
       '<iframe width="560" height="315" src="https://www.youtube.com/embed/' + video.id.videoId + '" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
 
     resultsContainer.appendChild(videoElement);
@@ -67,14 +67,15 @@ function displaySearchResults(results, initialDisplay1) {
 
     var videoElement = document.createElement('div');
     videoElement.classList.add('video');
-    videoElement.innerHTML = '<h3>' + video.snippet.title + '</h3>' +
+    videoElement.innerHTML = '<h3>' + video.snippet.title + ' <button class="saved-query-button" onclick="fetchRelatedVideos(`' + video.id.videoId + '`)"><small>Схожі відео</small></button>' + '</h3>' +
       '<iframe width="560" height="315" src="https://www.youtube.com/embed/' + video.id.videoId + '" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
 
     resultsContainer.appendChild(videoElement);
   }
+  
 }
 
-  
+
 }
 
 function saveQuery(query) {
@@ -129,4 +130,22 @@ function displayInitialSearchResults() {
     searchVideos(query, 2, true);
   }
 }
+
+function fetchRelatedVideos(videoId) {
+  var requestUrl = 'https://www.googleapis.com/youtube/v3/search?part=snippet&relatedToVideoId=' + videoId + '&type=video&maxResults=11&key=' + apiKey[Math.round(Math.random())];
+
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', requestUrl, true);
+  xhr.onload = function() {
+      if (xhr.status === 200) {
+          var response = JSON.parse(xhr.responseText);
+          displaySearchResults(response.items, false);
+      } else {
+          console.log('Request failed. Status: ' + xhr.status);
+      }
+  };
+  xhr.send();
+}
+
+
 
