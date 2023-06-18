@@ -62,7 +62,7 @@ function displaySearchResults(results, initialDisplay1) {
 
   else {
     resultsContainer.innerHTML = '';
-  for (var i = 0; i < results.length; i++) {
+  for (var i = 1; i < results.length; i++) {
     var video = results[i];
 
     var videoElement = document.createElement('div');
