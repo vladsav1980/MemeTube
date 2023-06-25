@@ -147,5 +147,16 @@ function fetchRelatedVideos(videoId) {
   xhr.send();
 }
 
+const buttons = document.querySelectorAll(".saved-query-button");
+
+buttons.forEach(function(button) {
+  button.onclick = function() {
+    button.style.opacity = "0.5"; // Зміна прозорості на 0.5
+
+    setTimeout(function() {
+      button.style.opacity = "1"; // Повернення прозорості до початкового значення
+    }, 1000); // Затримка у 1 секунду (1000 мілісекунд)
+  };
+});
 
 
