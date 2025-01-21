@@ -14,7 +14,7 @@ searchForm.addEventListener('submit', function(event) {
 
 document.addEventListener('DOMContentLoaded', function() {
   loadSavedQueries();
-  searchVideos('українські меми', 10, true);  
+  searchVideos('українські меми', 11, false);  
 });
 
 
