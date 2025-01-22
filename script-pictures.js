@@ -10,7 +10,7 @@ var searchForm = document.getElementById('search-form');
 
 document.addEventListener('DOMContentLoaded', function() {
   
-  searchVideos('українські меми', 11, false);  
+  searchVideos('останні меми', 11, false);  
 });
 
 
@@ -43,7 +43,7 @@ function displaySearchResults(results, initialDisplay1) {
     var videoElement = document.createElement('div');
     videoElement.classList.add('video');
     videoElement.innerHTML = '<h3>' + video.snippet.title +  '</h3>' +
-      '<img width="560" height="315" src="https://img.youtube.com/vi/' + video.id.videoId + '/maxresdefault.jpg">';
+      '<img width="300" height="200" src="https://img.youtube.com/vi/' + video.id.videoId + '/maxresdefault.jpg">';
 
     resultsContainer.appendChild(videoElement);
   }
@@ -56,7 +56,7 @@ function displaySearchResults(results, initialDisplay1) {
     var videoElement = document.createElement('div');
     videoElement.classList.add('video');
     videoElement.innerHTML = '<h3>' + video.snippet.title +  '</h3>' +
-      '<img width="560" height="315" src="https://img.youtube.com/vi/' + video.id.videoId + '/maxresdefault.jpg">';
+      '<img width="300" height="200" src="https://img.youtube.com/vi/' + video.id.videoId + '/maxresdefault.jpg">';
     resultsContainer.appendChild(videoElement);
   }
   
