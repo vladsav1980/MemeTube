@@ -10,7 +10,7 @@ var searchForm = document.getElementById('search-form');
 
 document.addEventListener('DOMContentLoaded', function() {
   
-  searchVideos('останні меми', 11, false);  
+  searchVideos('свіжі українські меми', 11, false);  
 });
 
 
