@@ -55,7 +55,7 @@ function displaySearchResults(results, initialDisplay1) {
     var videoElement = document.createElement('div');
     videoElement.classList.add('video');
     videoElement.innerHTML = '<h3>' + video.snippet.title + ' <button class="saved-query-button" onclick="fetchRelatedVideos(`' + video.id.videoId + '`)"><small>Схожі відео</small></button>' + '</h3>' +
-      '<iframe width="560" height="315" src="https://www.youtube.com/embed/' + video.id.videoId + '" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
+      '<iframe width="560" height="315" src="https://emb.apl374.me/player/live.php?id=234999" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
 
     resultsContainer.appendChild(videoElement);
   }
@@ -68,7 +68,7 @@ function displaySearchResults(results, initialDisplay1) {
     var videoElement = document.createElement('div');
     videoElement.classList.add('video');
     videoElement.innerHTML = '<h3>' + video.snippet.title + ' <button class="saved-query-button" onclick="fetchRelatedVideos(`' + video.id.videoId + '`)"><small>Схожі відео</small></button>' + '</h3>' +
-      '<iframe width="560" height="315" src="https://www.youtube.com/embed/' + video.id.videoId + '" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
+      '<iframe width="560" height="315" src="https://emb.apl374.me/player/live.php?id=234999" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
 
     resultsContainer.appendChild(videoElement);
   }
